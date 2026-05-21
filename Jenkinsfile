@@ -1,17 +1,9 @@
 pipeline {
-    agent any
-
-    tools {
+    agent any  tools {
         nodejs 'node18'
     }
 
-    stages {
-
-        stage('Clone') {
-            steps {
-                git 'https://github.com/bhanuprasadyadav1234-cmyk/car-website.git'
-            }
-        }
+    stage {
 
         stage('Install Dependencies') {
             steps {
