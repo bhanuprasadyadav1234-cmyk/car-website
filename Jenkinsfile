@@ -1,9 +1,11 @@
 pipeline {
-    agent any  tools {
+    agent any
+
+    tools {
         nodejs 'node18'
     }
 
-    stage {
+    stages {
 
         stage('Install Dependencies') {
             steps {
@@ -22,5 +24,6 @@ pipeline {
                 sh 'eb deploy'
             }
         }
+
     }
 }
