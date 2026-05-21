@@ -20,10 +20,9 @@ pipeline {
         }
 
         stage('Deploy') {
-	    steps {
+            steps {
                 sh '/usr/local/bin/eb deploy'
- 
-
+            }
         }
 
     }
